@@ -4,7 +4,7 @@ source "https://rubygems.org"
 gem "rails", "~> 8.0.5", ">= 8.0.5.1"
 # Pinned below 3.0: json 3.x dropped the `quirks_mode:` keyword that this
 # Rails version's ActiveSupport::JSON still passes to JSON.parse/generate.
-gem "json", "~> 2.9"
+gem "json", "~> 3.0"
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", ">= 2.1"
 # Use the Puma web server [https://github.com/puma/puma]
