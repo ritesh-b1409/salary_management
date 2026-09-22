@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2026_09_22_162945) do
+ActiveRecord::Schema[8.0].define(version: 2026_09_22_162951) do
   create_table "employees", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -31,6 +31,18 @@ ActiveRecord::Schema[8.0].define(version: 2026_09_22_162945) do
     t.index ["name"], name: "index_employees_on_name"
   end
 
+  create_table "salary_histories", force: :cascade do |t|
+    t.integer "employee_id", null: false
+    t.decimal "amount", precision: 12, scale: 2
+    t.string "currency"
+    t.date "effective_date"
+    t.string "reason"
+    t.string "changed_by"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["employee_id"], name: "index_salary_histories_on_employee_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
@@ -39,4 +51,6 @@ ActiveRecord::Schema[8.0].define(version: 2026_09_22_162945) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
   end
+
+  add_foreign_key "salary_histories", "employees"
 end

@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  employee: one
+  amount: 9.99
+  currency: MyString
+  effective_date: 2026-09-22
+  reason: MyString
+  changed_by: MyString
+
+two:
+  employee: two
+  amount: 9.99
+  currency: MyString
+  effective_date: 2026-09-22
+  reason: MyString
+  changed_by: MyString
