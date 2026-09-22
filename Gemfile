@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 8.0.5", ">= 8.0.5.1"
+gem "rails", "~> 8.1.3"
 # Pinned below 3.0: json 3.x dropped the `quirks_mode:` keyword that this
 # Rails version's ActiveSupport::JSON still passes to JSON.parse/generate.
 gem "json", "~> 2.9"
